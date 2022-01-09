@@ -1,0 +1,172 @@
+body
+{
+    margin: 0;
+    box-sizing: border-box;
+    background: hsl(210, 46%, 95%);
+    color: hsl(214, 17%, 51%);
+    font-family: 'Manrope', sans-serif;
+}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card
+{
+    width: 800px;
+    display: flex;
+    height: 300px;
+    border-radius: 10px;
+    background: white;
+}
+
+.card_image
+{
+    background-image: url("../images/drawers.jpg");
+    border-radius: 10px 0 0 10px;
+    height: 100%;
+    background-size: cover;
+    min-width: 38%;
+}
+
+.card h2
+{
+    color: hsl(217, 19%, 35%);
+}
+
+.card_wrap
+{
+    padding: 10px 30px;
+}
+
+.card_text
+{
+    font-size: 15px;
+}
+
+.card_label
+{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card_label > div
+{
+    display: flex;
+}
+
+.card_label img
+{
+    display: block;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+.card_label_text
+{
+    margin-left: 10px;
+}
+
+.card_label_text > h3
+{
+    margin: 0;
+    font-size: 15px;
+    color: hsl(217, 19%, 35%);
+}
+
+.card_label_text > div
+{
+    font-size: 12px;
+    color: hsl(212, 23%, 69%);
+}
+
+.card_button
+{
+    height: 2rem;
+    background: hsl(210, 46%, 95%);
+    width: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+}
+
+.card_button:hover
+{
+    cursor: pointer;
+}
+
+.card_clickmenu
+{
+    display: none;
+}
+
+.card_clickmenu.active
+{
+    position: absolute;
+    top: -200%;
+    height: 30px;
+    background-color: hsl(217, 19%, 35%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    color: hsl(212, 23%, 69%);
+    border-radius: 10px;
+    cursor: default;
+}
+
+.card_clickmenu > span
+{
+    margin-right: 10px;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.card_clickmenu > img
+{
+    border-radius: 0;
+    height: 50%;
+    margin: 0 5px;
+}
+
+.card_clickmenu:before
+{
+    content: "";
+    display: block;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 12px solid hsl(217, 19%, 35%);
+    transform: rotate(90deg);
+    top: 80%;
+    position: absolute;
+}
+
+.card_button > img
+{
+   height: 45%;
+}
+
+.card_clickmenu > img:hover
+{
+    cursor: pointer;
+}
+
+.overlay.active
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
