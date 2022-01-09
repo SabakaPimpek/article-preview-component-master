@@ -1,20 +1,27 @@
 const clickableButton = document.querySelector(".card_button");
-let clickmenu = clickableButton.querySelector(".card_clickmenu")
-let overlay = document.querySelector(".overlay");
+const clickmenu = document.querySelector(".card_clickmenu");
+const overlay = document.querySelector(".overlay")
+let classActive = false;
 
-clickableButton.addEventListener("click", () =>
+clickableButton.addEventListener("click", checkClickMenu);
+overlay.addEventListener("click", checkClickMenu);
+
+function checkClickMenu()
+{
+    if(classActive === false) openClickMenu()
+    else closeClickMenu();
+}
+
+function openClickMenu()
 {
     clickmenu.classList.add("active");
     overlay.classList.add("active");
-    closeClickMenu();
+    classActive = !classActive;
 }
-);
 
 function closeClickMenu()
 {
-    overlay.addEventListener("click", () =>
-    {
-        clickmenu.classList.remove("active");
-        overlay.classList.remove("active");
-    });
+    clickmenu.classList.remove("active");
+    overlay.classList.remove("active");
+    classActive = !classActive;
 }

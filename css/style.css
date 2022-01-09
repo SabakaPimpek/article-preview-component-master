@@ -108,22 +108,24 @@ body
 
 .card_clickmenu
 {
-    display: none;
-}
-
-.card_clickmenu.active
-{
+    transform: scale(0);
     position: absolute;
     top: -200%;
     height: 30px;
-    background-color: hsl(217, 19%, 35%);
     display: flex;
+    background-color: hsl(217, 19%, 35%);
     justify-content: center;
     align-items: center;
     padding: 10px 30px;
     color: hsl(212, 23%, 69%);
     border-radius: 10px;
+    transition: 0.3s transform ease-in-out;
+}
+
+.card_clickmenu.active
+{   
     cursor: default;
+    transform: scale(1);
 }
 
 .card_clickmenu > span
