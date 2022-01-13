@@ -1,3 +1,5 @@
+You can see this project at: https://sabakapimpek.github.io/article-preview-component-master/
+
 # Frontend Mentor - Article preview component
 
 ![Design preview for the Article preview component coding challenge](./design/desktop-preview.jpg)
