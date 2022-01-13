@@ -46,12 +46,12 @@ body
 .card_text
 {
     font-size: 15px;
+    margin-bottom: 20px;
 }
 
 .card_label
 {
     display: flex;
-    margin-top: 20px;
     align-items: center;
     justify-content: space-between;
 }
@@ -116,7 +116,6 @@ body
 
 .card_clickmenu
 {
-
     position: absolute;
     transform: scale(0);
     top: -200%;
@@ -180,4 +179,109 @@ body
     top: 0;
     width: 100vw;
     height: 100vh;
+}
+
+@media screen and (max-width: 820px)
+{
+    .card
+    {
+        flex-direction: column;
+        width: 70%;
+        height: fit-content;
+        overflow: hidden;
+    }
+
+    .card_image
+    {
+        height: 30vh;
+        background-position: center;
+        border-radius: 0;
+    }
+
+    .card_wrap
+    {
+        padding: 0;
+        margin-top: 30px;
+    }
+
+    .clickable_button
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .card_button
+    {
+        position: absolute;
+        right: 0;
+        width: 35px;
+        height: 35px;
+        margin: 0 40px;
+        z-index: 3;
+    }
+
+    .card_clickmenu
+    {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        top: 0;
+        border-radius: 0;
+        justify-content: start;
+    }
+
+    .card_clickmenu > span, .card_clickmenu > img
+    {
+        letter-spacing: 5px;
+        font-size: 18px;
+        margin: 0 0 0 30px;
+    }
+
+    .card_clickmenu > img
+    {
+        height: 35%;
+    }
+
+    .card_clickmenu:before
+    {
+        display: none;
+    }
+
+    .card h2
+    {
+        font-size: 1.4rem;
+        padding: 0 40px;
+    }
+
+    .card_text
+    {
+        padding: 0 40px;
+        font-size: 1.15rem;
+        width: 80%;
+    }
+
+    .card_label
+    {
+        position: relative;
+        padding: 15px 40px;
+    }
+
+    .card_label > div > img
+    {
+        height: 50px;
+        margin-right: 20px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .card
+    {
+        width: 90%;
+    }
+    
 }
